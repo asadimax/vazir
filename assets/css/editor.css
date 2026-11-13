@@ -1,0 +1,48 @@
+/* ظاهر ویرایشگر بلوک‌ها: راست‌چین با وزیرمتن، هماهنگ با پوسته */
+@font-face {
+	font-family: "Vazirmatn";
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url("../fonts/Vazirmatn-variable.woff2") format("woff2");
+}
+
+body,
+.editor-styles-wrapper {
+	direction: rtl;
+	text-align: right;
+	font-family: "Vazirmatn", Tahoma, "Segoe UI", Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.9;
+	color: #333;
+}
+
+.editor-styles-wrapper a {
+	color: #206ba4;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	font-family: inherit;
+	font-weight: 700;
+	line-height: 1.5;
+	color: #222;
+}
+
+.editor-styles-wrapper blockquote {
+	margin: 1.2em 0;
+	padding: .6em 1.1em;
+	background: #f7f7f7;
+	border-right: 4px solid #206ba4;
+	border-left: 0;
+}
+
+.editor-styles-wrapper pre,
+.editor-styles-wrapper code {
+	direction: ltr;
+	text-align: left;
+}
