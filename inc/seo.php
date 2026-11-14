@@ -410,6 +410,26 @@ function mfa_seo_customize( $wp_customize ) {
 		);
 	}
 
+	// جلوگیری از پرش متن هنگام بارگذاری فونت.
+	$wp_customize->add_setting(
+		'mfa_font_optional',
+		array(
+			'default'           => true,
+			'sanitize_callback' => static function ( $v ) {
+				return (bool) $v;
+			},
+		)
+	);
+	$wp_customize->add_control(
+		'mfa_font_optional',
+		array(
+			'label'       => 'جلوگیری از پرش متن هنگام بارگذاری فونت (بهبود CLS)',
+			'description' => 'اگر فونت وزیرمتن در لحظهٔ اول نرسد (اینترنت کند یا بازدید اول)، صفحهٔ همان بازدید با فونت سیستم نمایش داده می‌شود و از بازدید بعد با وزیرمتن. خاموش‌کردنش فونت را همیشه جایگزین می‌کند ولی ممکن است متن لحظه‌ای جابه‌جا شود.',
+			'section'     => 'mfa_seo',
+			'type'        => 'checkbox',
+		)
+	);
+
 	// محدودکردن نسخه‌های تصویر.
 	$wp_customize->add_setting(
 		'mfa_limit_images',

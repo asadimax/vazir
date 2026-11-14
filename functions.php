@@ -123,8 +123,11 @@ add_action( 'widgets_init', 'mfa_widgets_init' );
  */
 function mfa_font_face_css() {
 	$url = MFA_URI . '/assets/fonts/Vazirmatn-variable.woff2';
+	// optional: اگر فونت تا لحظه‌ای کوتاه نرسید، همان صفحه با فونت سیستم می‌ماند و متن بعداً «نمی‌پرد» (CLS صفر).
+	$display = get_theme_mod( 'mfa_font_optional', true ) ? 'optional' : 'swap';
 	return sprintf(
-		'@font-face{font-family:"Vazirmatn";font-style:normal;font-weight:100 900;font-display:swap;src:url("%s") format("woff2");}',
+		'@font-face{font-family:"Vazirmatn";font-style:normal;font-weight:100 900;font-display:%1$s;src:url("%2$s") format("woff2");}',
+		$display,
 		esc_url( $url )
 	);
 }

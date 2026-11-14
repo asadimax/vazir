@@ -654,6 +654,14 @@ input[type="button"]:hover {
 	line-height: 0;
 }
 
+.post-thumb img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+}
+
 .post-thumb:hover {
 	border-color: var(--accent);
 }
@@ -2234,6 +2242,8 @@ html[data-theme="dark"] .nav-toggle:hover {
 
 	.post-thumb img {
 		width: 100%;
+		height: auto;
+		aspect-ratio: 1 / 1;
 	}
 
 	.post-navigation .nav-links {
