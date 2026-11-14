@@ -2117,8 +2117,20 @@ html[data-theme="dark"] .nav-toggle:hover {
 		transform: rotate(180deg);
 	}
 
-	.submenu-toggle:hover {
+	/* بعد از لمس، حالت hover/focus مرورگر موبایل ماندگار می‌شود؛ رنگ فلش نباید سفید شود */
+	.submenu-toggle:hover,
+	.submenu-toggle:focus,
+	.submenu-toggle:active,
+	.nav-main li.open > .submenu-toggle {
 		background: transparent;
+		color: #444;
+	}
+
+	html[data-theme="dark"] .submenu-toggle:hover,
+	html[data-theme="dark"] .submenu-toggle:focus,
+	html[data-theme="dark"] .submenu-toggle:active,
+	html[data-theme="dark"] .nav-main li.open > .submenu-toggle {
+		color: #dcdce0;
 	}
 
 	.drawer-foot {
