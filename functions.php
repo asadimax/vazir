@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MFA_VERSION', '1.0.0' );
+define( 'MFA_VERSION', '1.0.1' );
 define( 'MFA_DIR', get_template_directory() );
 define( 'MFA_URI', get_template_directory_uri() );
 
